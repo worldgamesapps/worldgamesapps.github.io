@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Worldgamesapps</title>
+    <style>
+        :root {
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --heading-color: #2c3e50;
+            --subheading-color: #34495e;
+            --border-color: #eee;
+            --btn-color: #4CAF50;
+            --btn-hover: #333;
+            --secondary-text: #7f8c8d;
+            --theme-btn-bg: #333;
+            --theme-btn-text: #fff;
+        }
+
+        .dark-theme {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --heading-color: #3498db;
+            --subheading-color: #2980b9;
+            --border-color: #444;
+            --btn-color: #2E7D32;
+            --btn-hover: #45a049;
+            --secondary-text: #95a5a6;
+            --theme-btn-bg: #f0f0f0;
+            --theme-btn-text: #333;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: var(--text-color);
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--bg-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1 {
+            color: var(--heading-color);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--subheading-color);
+            margin-top: 25px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 15px;
+            background-color: var(--btn-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: var(--btn-hover);
+        }
+
+        .last-updated {
+            font-style: italic;
+            color: var(--secondary-text);
+            text-align: right;
+            margin-bottom: 30px;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px 16px;
+            background-color: var(--theme-btn-bg);
+            color: var(--theme-btn-text);
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .theme-toggle:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle">Dark Mode</button>
+    <a href="/index.html" class="back-btn">← Back to Home</a>
+    <h1>Privacy Policy for Worldgamesapps</h1>
+    <div class="last-updated">Last updated: August 3, 2025</div>
+
+    <h2>1. Introduction</h2>
+    <p>Welcome. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website or use our services.</p>
+
+
+    <a href="/index.html" class="back-btn">← Back to Home</a>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        // Check for saved theme preference
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-theme');
+            themeToggle.textContent = 'Light Mode';
+        }
+
+        // Theme toggle button
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            const isDark = body.classList.contains('dark-theme');
+            
+            if (isDark) {
+                themeToggle.textContent = 'Light Mode';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeToggle.textContent = 'Dark Mode';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+</html>
