@@ -1,7 +1,7 @@
-# app-ads.txt AdMob 30/10/2024
+# app-ads.txt AdMob
 google.com,pub-9966962268328280,DIRECT,f08c47fec0942fa0
 google.com,pub-7412758971890594,DIRECT,f08c47fec0942fa0
-# app-ads.txt yandex 30/10/2024
+# app-ads.txt yandex 
 yandex.com,33777372,DIRECT
 betweendigital.com,43554,RESELLER
 openx.com,541177349,RESELLER,6a698e2ec38604c6
